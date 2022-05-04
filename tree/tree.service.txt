@@ -1,0 +1,12 @@
+× tree.service - Huey Task Queue Manager
+     Loaded: loaded (/usr/lib/systemd/system/tree.service; disabled; vendor preset: disabled)
+     Active: failed (Result: exit-code) since Tue 2022-05-03 15:37:09 WEST; 18ms ago
+    Process: 287264 ExecStart=/usr/bin/huey_consumer.py tasks.huey -v -l huey.log (code=exited, status=200/CHDIR)
+   Main PID: 287264 (code=exited, status=200/CHDIR)
+        CPU: 1ms
+
+May 03 15:37:09 micaldas-host systemd[1]: Started Huey Task Queue Manager.
+May 03 15:37:09 micaldas-host systemd[287264]: tree.service: Changing to the requested working directory failed: No such file or directory
+May 03 15:37:09 micaldas-host systemd[287264]: tree.service: Failed at step CHDIR spawning /usr/bin/huey_consumer.py: No such file or directory
+May 03 15:37:09 micaldas-host systemd[1]: tree.service: Main process exited, code=exited, status=200/CHDIR
+May 03 15:37:09 micaldas-host systemd[1]: tree.service: Failed with result 'exit-code'.
