@@ -1,4 +1,4 @@
-#!/usr/bin/python3.10
+#!/usr/bin/python
 import os
 import pathlib
 import sys
@@ -12,12 +12,14 @@ from rich.text import Text
 from rich.tree import Tree
 
 
+# This sends all errors for devnull. Why, I can't remmeber.
 class DevNull:
     def write(self, msg):
         pass
 
 
 sys.stderr = DevNull()
+
 
 # @snoop
 def walk_directory(directory: pathlib.Path, tree: Tree) -> None:
